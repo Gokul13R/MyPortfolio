@@ -417,5 +417,17 @@ section{
          width: 56vw;
         height: 56vw;
     }
+    .MyGames{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .project{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .left-side-img{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
 
 }
