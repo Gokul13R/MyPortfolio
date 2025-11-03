@@ -3,6 +3,7 @@ let navber = document.querySelector('.navbar')
 
 menuIcon.onclick=()=>{
   navber.classList.toggle('active');
+  // menuIcon.classList.toggle('active');
 }
 
 
