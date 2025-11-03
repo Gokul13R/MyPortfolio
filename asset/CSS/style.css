@@ -7,9 +7,11 @@
     font-family: "Poppins";
 }
 :root {
-    --bg-color:#080808;
-    --second-bg-color:#101010;
+    --bg-color:#00a0ac;
+   
     --text-color:white;
+     --second-bg-color:#fffcfc;
+    --second-text-color:rgb(0, 0, 0);
     --main-color:#0cea7b;
 
 }
@@ -220,9 +222,12 @@ section{
 .about-content h2{
     font-size: 7rem;
     text-align: left;
+    color: var(--second-text-color);
 }
 .about-content p{
     font-size: 1.8rem;
+    color: var(--second-text-color);
+
 }
 .about-content .btn{
     margin: 3rem 0;
@@ -273,6 +278,11 @@ section{
     overflow: hidden;
     
 }
+.game-name{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
 .project {
   text-align: center;
   padding: 5rem 0;
@@ -284,22 +294,33 @@ section{
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
-}
+  color: var(--second-text-color);
 
+}
+.heading-Projects{
+    text-align: center;
+    font-size: 7rem;
+    margin: 5rem 0;
+    color: var(--second-text-color);
+
+}
 .project-buttons button {
   background: transparent;
   border: 2px solid var(--main-color);
-  color: white;
+  color: var(--second-text-color);
   padding: 1rem 2rem;
   cursor: pointer;
   font-size: 1.5rem;
   transition: 0.3s;
   border-radius: 10px;
+  font-weight: 300;
+ 
 }
 
 .project-buttons button:hover {
   background: var(--main-color);
   border-color: var(--main-color);
+ 
 }
 
 .project-content {
@@ -308,8 +329,7 @@ section{
   padding: 2rem;
   margin: 3rem auto 0;
   width: 95%;
-  /* min-height: 250px; */
-  color: white;
+  color: var(--second-text-color);
   border-radius: 15px;
 
   /* Important tweaks 👇 */
