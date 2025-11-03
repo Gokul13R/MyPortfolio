@@ -146,8 +146,8 @@ section{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-    padding: 1rem;
+    /* font-size: 3rem; */
+    padding: 0.2rem;
     background: transparent;
     border: 2px solid var(--main-color);
     border-radius: 50%;
@@ -160,6 +160,10 @@ section{
     background-color: var(--main-color);
     transform: scale(1.2)translateY(-5px);
     box-shadow: 0 0 25px var(--main-color);
+}
+.social-icon img{
+   width: 2vw;
+    height: 2vw;
 }
 .btn-group{
     display: flex;
@@ -254,7 +258,7 @@ section{
 .mygames-box{
     display: grid;
     grid-template-columns: repeat(auto-fit , 
-    minmax(150px,1fr));
+    minmax(200px,1fr));
     place-items: center;
     gap: 3rem;
   
@@ -274,7 +278,7 @@ section{
     background-color: var(--bg-color);
   
     gap: 2rem;
-    padding: 5rem 2rem;
+    padding: 7rem 2rem;
     overflow: hidden;
     
 }
