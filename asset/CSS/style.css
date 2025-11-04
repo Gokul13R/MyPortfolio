@@ -87,7 +87,8 @@ section {
   justify-content: center;
   gap: 15rem;
 
-  background-image: url("../asset/Image/4.png"); 
+  background-image: url("https://gokul13r.github.io/MyPortfolio/asset/Image/4.png");
+  /* background-image: url("../asset/Image/4.png");  */
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat; 
