@@ -87,7 +87,7 @@ section {
   justify-content: center;
   gap: 15rem;
 
-  background-image: url("asset/Image/4.png"); /* path to your image */
+  background-image: url("..asset/Image/4.png"); /* path to your image */
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat; 
