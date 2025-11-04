@@ -1,10 +1,16 @@
-let menuIcon = document.querySelector('.menu-icon')
-let navber = document.querySelector('.navbar')
+let menuIcon = document.querySelector('.menu-icon');
+let navbar = document.querySelector('.navbar');
 
-menuIcon.onclick=()=>{
-  navber.classList.toggle('active');
-  // menuIcon.classList.toggle('active');
-}
+menuIcon.onclick = () => {
+  navbar.classList.toggle('active');
+};
+
+// close navbar when clicking outside
+document.addEventListener('click', (e) => {
+  if (!navbar.contains(e.target) && !menuIcon.contains(e.target)) {
+    navbar.classList.remove('active');
+  }
+});
 
 
 function showProject(projectId) {
