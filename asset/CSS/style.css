@@ -225,7 +225,7 @@ section {
 
 .MyGames {
   /* background-color: var(--bg-color); */
-    background-image: url("/asset/Image/3.png"); 
+    background-image: url("https://gokul13r.github.io/MyPortfolio/asset/Image/3.png"); 
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat; 
