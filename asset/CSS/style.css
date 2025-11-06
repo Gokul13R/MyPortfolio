@@ -7,10 +7,11 @@
   font-family: "Poppins";
 }
 :root {
-  --bg-color: #00a0ac;
+  --bg-color: #000000;
 
   --text-color: white;
-  --second-bg-color: #fffcfc;
+  --second-bg-color: #ffffff;
+  /* --second-bg-color: linear-gradient(270deg, #f2ffb7 10%, #beff98 100%); */
   --second-text-color: rgb(0, 0, 0);
   --main-color: #0cea7b;
 }
@@ -88,11 +89,9 @@ section {
   gap: 15rem;
 
   background-image: url("https://gokul13r.github.io/MyPortfolio/asset/Image/4.png");
-  /* background-image: url("../asset/Image/4.png");  */
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat; 
-  
 }
 .home-content {
   display: flex;
@@ -111,7 +110,7 @@ section {
   font-size: 4rem;
 }
 .home-content p {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: 500;
   line-height: 1.8;
 }
@@ -211,6 +210,18 @@ section {
 }
 .about-content .btn {
   margin: 3rem 0;
+}
+.btn-group1 a:nth-of-type(2) {
+  background-color: rgb(255, 254, 254);
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 25px transparent;
+}
+
+.btn-group1 a:nth-of-type(2):hover {
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color);
+  color: rgb(255, 255, 255);
 }
 
 ::-webkit-scrollbar {
@@ -317,40 +328,63 @@ section {
 
 .project-content.active {
   display: block;
+   padding: 1rem 5rem;
 }
 
 .project-title {
-  font-size: 3.5rem;
-  color: aqua;
+  font-size: 5rem;
+  color: rgb(0, 0, 0);
   margin-bottom: 3rem;
+   padding: 2rem 5rem;
+
 }
-.project-sub-title {
-  font-size: 2.3rem;
-  color: aqua;
+.left-side-img-content h2 {
+  font-size: 3rem;
+  color: rgb(0, 46, 15);
   margin-bottom: 1rem;
+  padding: 1rem 1rem;
 }
+.left-side-img-content h3 {
+  font-size: 2.3rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 1rem;
+  padding: 1rem 1rem;
+}
+
 .left-side-img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
+  gap: 5rem;
   background: var(--second-bg-color);
+  padding: 2.5rem 0rem;
 }
 .left-img img {
   width: 35vw;
-  height: 32vw;
+  height: 25vw;
   box-shadow: 0 0 25px var(--main-color);
-  border-radius: 10%;
+  /* border-radius: 10%; */
 }
 .left-side-img-content {
   font-size: 2rem;
   text-align: left;
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
 }
 .left-side-img-content p {
   font-size: 1.8rem;
   margin-bottom: 2rem;
 }
+.left-img512 img{
+  width: 30vw;
+  height: 30vw;
+  box-shadow: 0 0 25px var(--main-color);
+  
+}
+
+
+
+
+
 .menu-icon {
   font-size: 2.5rem;
   color: white;
@@ -441,12 +475,22 @@ section {
     width: 5vw;
     height: 5vw;
   }
+  .left-img img {
+  width: 60vw;
+  height: 40vw;
+  box-shadow: 0 0 25px var(--main-color);
+  /* border-radius: 10%; */
 }
-@media (max-width: 700px) {
+}
 
- .navbar {
+@media (max-width: 768px) {
+  .navbar {
  
     width: 49%;
    
+  }
+  .left-img512 img {
+    width: 60vw;
+    height: auto;
   }
 }
