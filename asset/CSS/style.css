@@ -371,6 +371,7 @@ section {
   padding: 1rem 1rem;
 }
 .left-side-img-content p {
+  font-size: 2rem;
   font-size: 1.8rem;
   margin-bottom: 2rem;
 }
@@ -469,6 +470,7 @@ section {
 
 /* Right Side Text */
 .project-sub-right {
+  font-size: 2rem;
   max-width: 45vw;
   text-align: left;
 }
@@ -486,6 +488,10 @@ section {
 
 .project-sub-section-right {
   flex-direction: row-reverse;
+}
+
+.project-sub-right {
+   margin-top: 0;
 }
 
 
