@@ -10,10 +10,10 @@
   --bg-color: #000000;
 
   --text-color: white;
-  --second-bg-color: #ffffff;
+  --second-bg-color: #000000;
   /* --second-bg-color: linear-gradient(270deg, #f2ffb7 10%, #beff98 100%); */
-  --second-text-color: rgb(0, 0, 0);
-  --main-color: #0cea7b;
+  --second-text-color: rgb(255, 255, 255);
+  --main-color: #d80090;
 }
 html {
   font-size: 60%;
@@ -333,22 +333,10 @@ section {
 
 .project-title {
   font-size: 5rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 248, 248);
   margin-bottom: 3rem;
    padding: 2rem 5rem;
 
-}
-.left-side-img-content h2 {
-  font-size: 3rem;
-  color: rgb(0, 46, 15);
-  margin-bottom: 1rem;
-  padding: 1rem 1rem;
-}
-.left-side-img-content h3 {
-  font-size: 2.3rem;
-  color: rgb(0, 0, 0);
-  margin-bottom: 1rem;
-  padding: 1rem 1rem;
 }
 
 .left-side-img {
@@ -360,58 +348,13 @@ section {
   padding: 2.5rem 0rem;
 }
 .left-img img {
-  width: 35vw;
-  height: 25vw;
+  width: 40vw;
+  height: 22vw;
   box-shadow: 0 0 25px var(--main-color);
-  /* border-radius: 10%; */
-}
-.left-side-img-content {
-  font-size: 2rem;
-  text-align: left;
-  padding: 1rem 1rem;
-}
-.left-side-img-content p {
-  font-size: 2rem;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-}
-.left-img512 img{
-  width: 30vw;
-  height: 30vw;
-  box-shadow: 0 0 25px var(--main-color);
-  
-}
-.Image-and-button-Group {
-  display: flex;
-  flex-direction: column; /* stack image & buttons vertically */
-  align-items: center; /* center based on image width */
-  justify-content: center;
-  padding: 2.5rem 0rem;
+  border-radius: 1.5rem;
 }
 
-.Image-Switch-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 1.2rem;
-}
 
-.Image-Switch-buttons button {
-  background: transparent;
-  border: 2px solid var(--main-color);
-  color: var(--second-text-color);
-  padding: 1rem 2rem;
-  cursor: pointer;
-  font-size: 1.5rem;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.Image-Switch-buttons button:hover {
-  background: var(--main-color);
-  border-color: var(--main-color);
-}
 
 .project-sub-section {
   display: flex;
@@ -434,6 +377,7 @@ section {
   height: 30vw;
   object-fit: cover;
   box-shadow: 0 0 25px var(--main-color);
+  border-radius: 1.5rem;
   
 }
 
@@ -451,6 +395,7 @@ section {
   margin-top: 1rem;
   padding: 2rem 0;
   /* gap: 10rem ; */
+   
 }
 
 .project-sub-buttons button {
@@ -461,6 +406,8 @@ section {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
+   color: var(--main-color);
+   font-weight: 700;
 }
 
 .project-sub-buttons button:hover {
@@ -476,14 +423,22 @@ section {
 }
 
 .project-sub-title {
-  font-size: 3rem;
-  color: rgb(0, 46, 15);
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
   margin-bottom: 1rem;
 }
 
 .project-sub-right p {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.5;
+  padding: 1rem 0;
+}
+.project-sub-right ul {
+  font-size: 2rem;
+  line-height: 1.5;
+  padding: 1rem 0rem;
+
+  margin-left: 2rem;
 }
 
 .project-sub-section-right {
@@ -585,24 +540,13 @@ section {
     width: 5vw;
     height: 5vw;
   }
-  .left-img img {
-  width: 60vw;
-  height: 40vw;
-  box-shadow: 0 0 25px var(--main-color);
-  /* border-radius: 10%; */
-}
-}
 
-@media (max-width: 768px) {
-  .navbar {
- 
-    width: 49%;
-   
-  }
-  .left-img512 img {
-    width: 60vw;
-    height: auto;
-  }
+.left-img img {
+  
+  width: 70vw;
+  height: auto;
+  
+}
 
   .project-sub-section,
   .project-sub-section-right {
@@ -615,7 +559,16 @@ section {
   }
 
   .project-sub-img img {
-    width: 60vw;
-    height: 60vw;
+    width: 70vw;
+    height: auto;
   }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+ 
+    width: 49%;
+   
+  }
+ 
 }
