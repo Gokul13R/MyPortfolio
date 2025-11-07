@@ -380,9 +380,113 @@ section {
   box-shadow: 0 0 25px var(--main-color);
   
 }
+.Image-and-button-Group {
+  display: flex;
+  flex-direction: column; /* stack image & buttons vertically */
+  align-items: center; /* center based on image width */
+  justify-content: center;
+  padding: 2.5rem 0rem;
+}
 
+.Image-Switch-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
 
+.Image-Switch-buttons button {
+  background: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--second-text-color);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  transition: 0.3s;
+}
 
+.Image-Switch-buttons button:hover {
+  background: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.project-sub-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  background: var(--second-bg-color);
+  padding: 3rem 0;
+}
+
+.project-sub-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   padding: 2rem 0;
+}
+
+.project-sub-img img {
+  width: 30vw;
+  height: 30vw;
+  object-fit: cover;
+  box-shadow: 0 0 25px var(--main-color);
+  
+}
+
+.project-sub-img-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/* Buttons */
+.project-sub-buttons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1rem;
+  padding: 2rem 0;
+  /* gap: 10rem ; */
+}
+
+.project-sub-buttons button {
+  background: transparent;
+  border: 2px solid var(--main-color);
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-sub-buttons button:hover {
+  background: var(--main-color);
+  border-color: var(--main-color);
+}
+
+/* Right Side Text */
+.project-sub-right {
+  max-width: 45vw;
+  text-align: left;
+}
+
+.project-sub-title {
+  font-size: 3rem;
+  color: rgb(0, 46, 15);
+  margin-bottom: 1rem;
+}
+
+.project-sub-right p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.project-sub-section-right {
+  flex-direction: row-reverse;
+}
 
 
 .menu-icon {
@@ -492,5 +596,20 @@ section {
   .left-img512 img {
     width: 60vw;
     height: auto;
+  }
+
+  .project-sub-section,
+  .project-sub-section-right {
+   flex-direction: column-reverse; 
+    text-align: center;
+  }
+
+  .project-sub-right {
+    max-width: 90vw;
+  }
+
+  .project-sub-img img {
+    width: 60vw;
+    height: 60vw;
   }
 }

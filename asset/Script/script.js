@@ -20,3 +20,23 @@ function showProject(projectId) {
   const selected = document.getElementById(projectId);
   selected.classList.add('active');
 }
+
+document.querySelectorAll(".image-slider").forEach((slider) => {
+  const img = slider.querySelector("img");
+  const prev = slider.querySelector(".prev-img");
+  const next = slider.querySelector(".next-img");
+
+  const images = JSON.parse(slider.getAttribute("data-images"));
+  let index = 0;
+
+  prev.addEventListener("click", () => {
+    index = (index - 1 + images.length) % images.length;
+    img.src = images[index];
+  });
+
+  next.addEventListener("click", () => {
+    index = (index + 1) % images.length;
+    img.src = images[index];
+  });
+});
+
