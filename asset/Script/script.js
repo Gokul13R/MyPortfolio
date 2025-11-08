@@ -1,24 +1,23 @@
-let menuIcon = document.querySelector('.menu-icon');
-let navbar = document.querySelector('.navbar');
+let menuIcon = document.querySelector(".menu-icon");
+let navbar = document.querySelector(".navbar");
 
 menuIcon.onclick = () => {
-  navbar.classList.toggle('active');
+  navbar.classList.toggle("active");
 };
 
 // close navbar when clicking outside
-document.addEventListener('click', (e) => {
+document.addEventListener("click", (e) => {
   if (!navbar.contains(e.target) && !menuIcon.contains(e.target)) {
-    navbar.classList.remove('active');
+    navbar.classList.remove("active");
   }
 });
 
-
 function showProject(projectId) {
-  const projects = document.querySelectorAll('.project-content');
-  projects.forEach(project => project.classList.remove('active'));
+  const projects = document.querySelectorAll(".project-content");
+  projects.forEach((project) => project.classList.remove("active"));
 
   const selected = document.getElementById(projectId);
-  selected.classList.add('active');
+  selected.classList.add("active");
 }
 
 document.querySelectorAll(".image-slider").forEach((slider) => {
@@ -39,4 +38,3 @@ document.querySelectorAll(".image-slider").forEach((slider) => {
     img.src = images[index];
   });
 });
-
