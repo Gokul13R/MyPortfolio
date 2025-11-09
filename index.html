@@ -68,7 +68,7 @@
         <img src="asset/Image/gg/new.jpg" alt="" />
       </div> -->
     </section>
- 
+
     <!--++++++++++++++++++ PROJECT +++++++++++++++++++++++++++ -->
     <section class="project" id="project">
       <h2 class="heading-Projects">My <span>Projects</span></h2>
@@ -81,7 +81,6 @@
       <div id="project1" class="project-content active">
         <h3 class="project-title">FPS Survival Shooter</h3>
 
-       
         <!-- new -->
         <div class="project-sub-section project-sub-section-right">
           <div
@@ -104,7 +103,7 @@
               </div>
 
               <div class="project-sub-buttons">
-                 <button class="prev-img">Prev</button>
+                <button class="prev-img">Prev</button>
                 <button class="next-img">Next</button>
               </div>
             </div>
@@ -143,7 +142,7 @@
           </div>
         </div>
         <!-- end -->
-         <div class="project-game-card">
+        <div class="project-game-card">
           <img
             src="asset/Image/Icon/neon.png"
             alt="Neon Waves: The Forest of Fear"
@@ -160,12 +159,8 @@
 
         <!-- Cross-Platform Game Master Controller -->
 
-
         <div class="project-sub-section">
-          <div
-            class="project-sub-left"
-           
-          >
+          <div class="project-sub-left">
             <div class="project-sub-img-group">
               <div class="project-sub-img">
                 <img
@@ -300,7 +295,7 @@
               </div>
 
               <div class="project-sub-buttons">
-                 <button class="prev-img">Prev</button>
+                <button class="prev-img">Prev</button>
                 <button class="next-img">Next</button>
               </div>
             </div>
@@ -360,7 +355,10 @@
           >
             <div class="project-sub-img-group">
               <div class="project-sub-img">
-                <img src="asset/Image/Projectos/Neon/powerupcards_1.png" alt="" />
+                <img
+                  src="asset/Image/Projectos/Neon/powerupcards_1.png"
+                  alt=""
+                />
               </div>
 
               <div class="project-sub-buttons">
@@ -401,16 +399,143 @@
               </li>
             </ul>
             <p></p>
-           
-        
           </div>
         </div>
 
-        <!--============== MT==================== -->
+        <!--============== Gun Data System (Scriptable Object) ==================== -->
 
         <div class="project-sub-section">
           <div
             class="project-sub-left image-slider"
+            data-images='[
+              "asset/Image/Projectos/Neon/GunA.png",
+              "asset/Image/Projectos/Neon/Gun2.png",
+              "asset/Image/Projectos/Neon/gunGameplay.png"
+            ]'
+          >
+            <div class="project-sub-img-group">
+              <div class="project-sub-img">
+                <img src="asset/Image/Projectos/Neon/GunA.png" alt="" />
+              </div>
+
+              <div class="project-sub-buttons">
+                <button class="prev-img">Prev</button>
+                <button class="next-img">Next</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-sub-right">
+            <h2 class="project-sub-title">
+              Gun Data System (Scriptable Object)
+            </h2>
+
+            <p>
+              I developed a ScriptableObject-driven gun data system to manage
+              all weapon stats, visual effects, and sound effects in a modular
+              way. Each gun has its own ScriptableObject that stores:
+            </p>
+            <ul>
+              <li>
+                Weapon Identity: Gun name, type, and UI icon for weapon
+                switching
+              </li>
+              <li>
+                Combat Stats: Damage, rate of fire, bullet speed, recoil,
+                magazine size, and reload speed
+              </li>
+              <li>
+                Spread & Recoil Control: All recoil behavior and bullet spread
+                are handled entirely through code (no animation-based recoil).
+                This allows consistent and predictable gun handling.
+              </li>
+              <li>
+                Audio Integration: Each weapon asset includes its firing, reload
+                start, and reload end sounds, along with individual volume
+                controls for fine-tuning.
+              </li>
+            </ul>
+            <p>
+              The gun stats can be dynamically modified based on power-up cards
+              the player receives after each wave. For example, if the player
+              selects a “+50% Damage” card, the damage value in the gun data is
+              updated at runtime without changing the original ScriptableObject
+              asset. <br />
+              This allows:
+            </p>
+            <ul>
+              <li>Flexible weapon upgrades</li>
+              <li>Easy balancing and tuning in the Inspector</li>
+              <li>Clean separation of data from logic</li>
+              <li>
+                Reusable weapons and upgrade behaviors across different guns
+              </li>
+            </ul>
+
+            <p>
+              Overall, this system makes adding or adjusting weapons scalable
+              and efficient, while also supporting the game’s wave-based upgrade
+              mechanics.
+            </p>
+          </div>
+        </div>
+
+        <!--============== Gun Data System (Scriptable Object) ==================== -->
+
+        <!--============== Centralized Audio Manager System ==================== -->
+
+        <div class="project-sub-section project-sub-section-right">
+          <div
+            class="project-sub-left image-slider"
+            data-images='[
+              "asset/Image/Projectos/Neon/Sound2.png",
+              "asset/Image/Projectos/Neon/Sound1.png",
+              "asset/Image/Projectos/Neon/Sound3.png"
+            ]'
+          >
+            <div class="project-sub-img-group">
+              <div class="project-sub-img">
+                <img src="asset/Image/Projectos/Neon/Sound2.png" alt="" />
+              </div>
+
+              <div class="project-sub-buttons">
+                <button class="prev-img">Prev</button>
+                <button class="next-img">Next</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-sub-right">
+            <h2 class="project-sub-title">Centralized Audio Manager System</h2>
+
+            <p>
+              I implemented a centralized Audio Manager that allows playing
+              sound effects from anywhere in the project with a single function
+              call:
+            </p>
+            <p>
+              AudioManager.Instance.PlaySoundEffectClip(SoundFX,
+              transform,SoundFXVol);
+            </p>
+            <p>
+              This system spawns and destroys temporary audio sources at
+              runtime, which means individual GameObjects (like enemies,
+              weapons, UI buttons, or environment elements) do not need their
+              own AudioSource components. This keeps the scene hierarchy clean,
+              reduces component overhead, and makes managing sound levels and
+              mixers much simpler. All sound groups (Music, UI, EnemyFX, etc.)
+              are routed through a unified Audio Mixer, allowing full volume
+              control from the in-game settings menu.
+            </p>
+          </div>
+        </div>
+
+        <!--==============  Centralized Audio Manager System ==================== -->
+        <!--============== Performance & Optimization ==================== -->
+
+        <div class="project-sub-section">
+          <div
+            class="project-sub-left"
             data-images='[
               "asset/Image/Projectos/Neon/powerupcards.png",
               "asset/Image/Projectos/Neon/EnemyAI.png",
@@ -419,80 +544,139 @@
           >
             <div class="project-sub-img-group">
               <div class="project-sub-img">
-                <img src="asset/Image/Projectos/Neon/powerupcards.png" alt="" />
+                <img src="asset/Image/Projectos/Neon/stat.png" alt="" />
               </div>
 
-              <div class="project-sub-buttons">
-                 <button class="prev-img">Prev</button>
+              <!-- <div class="project-sub-buttons">
+                <button class="prev-img">Prev</button>
                 <button class="next-img">Next</button>
-              </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="project-sub-right">
+            <h2 class="project-sub-title">Performance & Optimization</h2>
+
+            <p>
+              To ensure the game runs smoothly on low-end mobile devices, I
+              applied several optimization techniques focused on reducing
+              rendering cost and draw calls:
+            </p>
+            <ul>
+              <li>
+                Selective Occlusion Culling: Instead of enabling occlusion
+                culling for every object, I applied it only to high-polygon
+                environment models. This reduced overdraw and saved memory,
+                without increasing the final build size unnecessarily.
+              </li>
+
+              <li>
+                Unlit Shader Usage: All environment and neon elements use Unlit
+                shaders, which removes real-time lighting and reflection
+                calculations. This significantly lowers GPU workload and
+                provides a clean, stylized visual look suitable for mobile
+                performance.
+              </li>
+              <li>
+                Texture Atlas: I combined multiple textures into a single
+                512×512 texture atlas, minimizing material and texture switches.
+                This reduces draw calls and improves batching efficiency.
+              </li>
+            </ul>
+            <p>
+              With these optimizations, the game consistently achieves 165+ FPS
+              in the Unity Editor on a Ryzen 3 3200G with 16GB RAM and no
+              dedicated GPU, demonstrating strong performance scalability for
+              mobile hardware.
+            </p>
+          </div>
+        </div>
+
+        <!--============== Performance & Optimization ==================== -->
+        <!--============== Project Summary (Solo Development) ==================== -->
+
+        <div class="project-sub-section project-sub-section-right">
+          <div
+            class="project-sub-left"
+            data-images='[
+              "asset/Image/Projectos/Neon/powerupcards.png",
+              "asset/Image/Projectos/Neon/EnemyAI.png",
+              "asset/Image/Projectos/Neon/ModularEnemy.png"
+            ]'
+          >
+            <div class="project-sub-img-group">
+               <div class="project-sub-img">
+                <img src="asset/Image/Projectos/Neon/StartPage.png" alt="" />
+              </div> 
+
+               <!-- <div class="project-sub-buttons">
+                <button class="prev-img">Prev</button>
+                <button class="next-img">Next</button>
+              </div>  -->
             </div>
           </div>
 
           <div class="project-sub-right">
             <h2 class="project-sub-title">
-              Power-Up Card System (Wave Rewards)
+              Project Summary (Solo Development)
             </h2>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              earum nobis cum nemo porro doloremque facilis repellat minima
-              impedit autem hic a ut sapiente.
+              This project was developed entirely by me, covering both gameplay
+              programming and environment art. I implemented the core FPS
+              systems, including:
+            </p>
+            <ul>
+              <li>
+                Aim Assist & Auto-Fire features for mobile-friendly controls
+              </li>
+              <li>
+                Weapon System with gun switching, ADS behavior, ammo management,
+                and reload events
+              </li>
+              <li>Monetization Integration using mobile Ads SDK</li>
+              <li>
+                Player Controller with smooth movement, camera control, and
+                animation events
+              </li>
+              <li>Item Pickup System for ammo and power-up upgrades</li>
+              <li>Enemy AI with melee and ranged attack behaviors</li>
+              <li>Camera Shake & Impact Feedback to enhance combat feel</li>
+            </ul>
+
+            <p>
+              All environment assets were modeled in Blender, optimized for
+              mobile, and textured in a neon stylized theme. Enemy characters
+              were sourced from Mixamo, then remodeled, retextured, and
+              poly-reduced to match the art direction and maintain high
+              performance on low-end devices.
+            </p>
+
+            <p>
+              This project showcases my ability to handle full-cycle game
+              development, including programming, optimization, visual
+              direction, and performance tuning for mobile hardware.
             </p>
           </div>
         </div>
 
-         <!--============== MT==================== -->
+        <!--============== Project Summary (Solo Development) ==================== -->
+
+        <!--============== END ==================== -->
+         <div class="btn1">
+
+          <a href="#project" class="btn">My Project</a>
+         </div>
+            
+
+        <!--============== END ==================== -->
       </div>
-<!-- ?????????????????????? PROJECT 2 ????????????????????????-->
+      <!-- ?????????????????????? PROJECT 2 ????????????????????????-->
 
       <div id="project2" class="project-content">
         <h3 class="project-title">Project 2 Title</h3>
 
-         <!--============== MT==================== -->
-
-        <div class="project-sub-section">
-          <div
-            class="project-sub-left image-slider"
-            data-images='[
-              "asset/Image/Projectos/Neon/powerupcards.png",
-              "asset/Image/Projectos/Neon/EnemyAI.png",
-              "asset/Image/Projectos/Neon/ModularEnemy.png"
-            ]'
-          >
-            <div class="project-sub-img-group">
-              <div class="project-sub-img">
-                <img src="asset/Image/Projectos/Neon/powerupcards.png" alt="" />
-              </div>
-
-              <div class="project-sub-buttons">
-               <button class="prev-img">Prev</button>
-                <button class="next-img">Next</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-sub-right">
-            <h2 class="project-sub-title">
-              Power-Up Card System (Wave Rewards)
-            </h2>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              earum nobis cum nemo porro doloremque facilis repellat minima
-              impedit autem hic a ut sapiente.
-            </p>
-          </div>
-        </div>
-
-         <!--============== MT==================== -->
-
-      </div>
-<!-- ?????????????????????? PROJECT 3 ????????????????????????-->
-      <div id="project3" class="project-content">
-        <h3 class="project-title">Project 3 Title</h3>
-
-     <!--============== MT==================== -->
+        <!--============== MT==================== -->
 
         <div class="project-sub-section">
           <div
@@ -528,11 +712,52 @@
           </div>
         </div>
 
-         <!--============== MT==================== -->>
+        <!--============== MT==================== -->
+      </div>
+      <!-- ?????????????????????? PROJECT 3 ????????????????????????-->
+      <div id="project3" class="project-content">
+        <h3 class="project-title">Project 3 Title</h3>
 
+        <!--============== MT==================== -->
+
+        <div class="project-sub-section">
+          <div
+            class="project-sub-left image-slider"
+            data-images='[
+              "asset/Image/Projectos/Neon/powerupcards.png",
+              "asset/Image/Projectos/Neon/EnemyAI.png",
+              "asset/Image/Projectos/Neon/ModularEnemy.png"
+            ]'
+          >
+            <div class="project-sub-img-group">
+              <div class="project-sub-img">
+                <img src="asset/Image/Projectos/Neon/powerupcards.png" alt="" />
+              </div>
+
+              <div class="project-sub-buttons">
+                <button class="prev-img">Prev</button>
+                <button class="next-img">Next</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-sub-right">
+            <h2 class="project-sub-title">
+              Power-Up Card System (Wave Rewards)
+            </h2>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              earum nobis cum nemo porro doloremque facilis repellat minima
+              impedit autem hic a ut sapiente.
+            </p>
+          </div>
+        </div>
+
+        <!--============== MT==================== -->>
       </div>
     </section>
- <!--++++++++++++++++++ MY GAMES +++++++++++++++++++++++++++ -->
+    <!--++++++++++++++++++ MY GAMES +++++++++++++++++++++++++++ -->
     <section class="MyGames" id="MyGames">
       <h2 class="heading">My <span>Games</span></h2>
 
@@ -572,7 +797,7 @@
       </div>
     </section>
 
- <!--++++++++++++++++++ ABOUT +++++++++++++++++++++++++++ -->
+    <!--++++++++++++++++++ ABOUT +++++++++++++++++++++++++++ -->
 
     <section class="about" id="about">
       <!-- <div class="about-image">
