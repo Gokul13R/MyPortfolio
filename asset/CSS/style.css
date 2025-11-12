@@ -7,19 +7,19 @@
   /* font-family: "Poppins"; */
 }
 :root {
-  --bg-color: #000000;
+  --bg-color: #ffffff;
 
-  --text-color: white;
-  --second-bg-color: #000000;
+  --text-color: rgb(243, 243, 243);
+  --second-bg-color: #ffffff;
   /* --second-bg-color: linear-gradient(270deg, #f2ffb7 10%, #beff98 100%); */
-  --second-text-color: rgb(255, 255, 255);
-  --main-color: #d80090;
+  --second-text-color: rgb(0, 0, 0);
+  --main-color: #b8d800;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -96,15 +96,17 @@ section {
   gap: 15rem;
 
   background-image: url("https://gokul13r.github.io/MyPortfolio/asset/Image/4.png");
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 }
 .home-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
+  /* align-items: flex-end; */
+  /* text-align: right; */
+  align-items: center;
+  text-align: center;
 }
 .home-content h1 {
   font-size: 8rem;
@@ -193,7 +195,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 10rem;
-  background: var(--second-bg-color); 
+  background: var(--second-bg-color);
 }
 .about-image img {
   width: 32vw;
@@ -208,16 +210,33 @@ section {
 }
 .about-content h2 {
   font-size: 7rem;
-  text-align: left;
+  text-align: center;
   color: var(--second-text-color);
 }
 .about-content p {
   font-size: 1.8rem;
+  text-align: center;
   color: var(--second-text-color);
+  margin: 0 auto; /* center the block itself */
+  padding: 0% 23%;
 }
 .about-content .btn {
   margin: 3rem 0;
 }
+
+.about {
+  flex-direction: column-reverse;
+  text-align: center;
+}
+.about h2 {
+  text-align: center;
+  margin: 2rem 0;
+}
+.about a {
+  margin: 0 20rem;
+  /* padding:  0  20rem; */
+}
+
 .btn-group1 a:nth-of-type(2) {
   background-color: rgb(255, 254, 254);
   color: var(--main-color);
@@ -243,10 +262,10 @@ section {
 
 .MyGames {
   /* background-color: var(--bg-color); */
-    background-image: url("https://gokul13r.github.io/MyPortfolio/asset/Image/3.png"); 
-  background-size: cover; 
+  background-image: url("https://gokul13r.github.io/MyPortfolio/asset/Image/3.png");
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 }
 .heading {
   text-align: center;
@@ -298,7 +317,7 @@ section {
   text-align: center;
   font-size: 7rem;
   margin: 5rem 0;
-  color: var(--second-text-color);
+  color: var(--main-color);
 }
 .project-buttons button {
   background: transparent;
@@ -335,15 +354,14 @@ section {
 
 .project-content.active {
   display: block;
-   padding: 1rem 5rem;
+  padding: 1rem 5rem;
 }
 
 .project-title {
   font-size: 5rem;
-  color: rgb(255, 248, 248);
+  color: var(--main-color);
   margin-bottom: 3rem;
-   padding: 2rem 5rem;
-
+  padding: 2rem 5rem;
 }
 
 .left-side-img {
@@ -359,10 +377,7 @@ section {
   height: 22vw;
   box-shadow: 0 0 25px var(--main-color);
   border-radius: 1.5rem;
-  
 }
-
-
 
 .project-sub-section {
   display: flex;
@@ -377,7 +392,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-   padding: 2rem 0;
+  padding: 2rem 0;
 }
 
 .project-sub-img img {
@@ -386,14 +401,12 @@ section {
   object-fit: cover;
   box-shadow: 0 0 25px var(--main-color);
   border-radius: 1.5rem;
-  
 }
 
 .project-sub-img-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 /* Buttons */
@@ -403,7 +416,6 @@ section {
   margin-top: 1rem;
   padding: 2rem 0;
   /* gap: 10rem ; */
-   
 }
 
 .project-sub-buttons button {
@@ -414,8 +426,8 @@ section {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
-   color: var(--main-color);
-   font-weight: 700;
+  color: var(--main-color);
+  font-weight: 700;
 }
 
 .project-sub-buttons button:hover {
@@ -430,20 +442,18 @@ section {
   text-align: left;
 }
 
-.project-sub-right-intro{
-   font-size: 2rem;
+.project-sub-right-intro {
+  font-size: 2rem;
   max-width: 33vw;
   text-align: left;
 }
-.project-sub-right-intro li{
-   padding: 1rem 0rem;
-   
+.project-sub-right-intro li {
+  padding: 1rem 0rem;
 }
-
 
 .project-sub-title {
   font-size: 4rem;
-  color: rgb(255, 255, 255);
+  color: var(--main-color);
   margin-bottom: 1rem;
 }
 
@@ -465,25 +475,20 @@ section {
 }
 
 .project-sub-right {
-   margin-top: 0;
+  margin-top: 0;
 }
-.project-game-card img{
-
+.project-game-card img {
   width: 10vw;
   height: auto;
   border-radius: 3rem;
   padding: 1rem 0rem;
 }
-.project-game-card h3{
+.project-game-card h3 {
   padding: 1rem 0rem;
-
-
 }
-.btn1{
+.btn1 {
   padding: 2rem 0rem;
-
 }
-
 
 .menu-icon {
   font-size: 2.5rem;
@@ -495,7 +500,76 @@ section {
   color: var(--main-color);
   display: none;
 }
-@media (max-width: 1285px) {
+
+.footer {
+  background-color: var(--bg-color);
+  padding: 30px 0;
+}
+.footer .social-icon {
+  text-align: center;
+}
+
+.footer ul {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer ul li a {
+  color: rgb(0, 0, 0);
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover {
+  border-bottom: 3px solid var(--main-color);
+}
+.footer .copyright {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.copyright a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1290px) {
+  .menu-icon {
+    display: block;
+  }
+  .logo {
+    font-size: 3rem;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 30%;
+    padding: 1rem 3rem;
+    background: #080808c4;
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    display: none;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--text-color);
+  }
+  .navbar.active {
+    display: block;
+  }
+
   .home {
     flex-direction: column-reverse;
     margin: 5rem 0;
@@ -536,34 +610,6 @@ section {
 }
 
 @media (max-width: 1050px) {
-  .menu-icon {
-    display: block;
-  }
-  .logo {
-    font-size: 3rem;
-    
-  }
-  .navbar {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 30%;
-    padding: 1rem 3rem;
-    background: #080808c4;
-    border-bottom-left-radius: 2rem;
-    border-left: 2px solid var(--main-color);
-    border-bottom: 2px solid var(--main-color);
-    display: none;
-  }
-  .navbar a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-    color: var(--text-color);
-  }
-  .navbar.active {
-    display: block;
-  }
   .gradient-btn {
     display: none;
   }
@@ -576,16 +622,14 @@ section {
     height: 5vw;
   }
 
-.left-img img {
-  
-  width: 70vw;
-  height: auto;
-  
-}
+  .left-img img {
+    width: 70vw;
+    height: auto;
+  }
 
   .project-sub-section,
   .project-sub-section-right {
-   flex-direction: column-reverse; 
+    flex-direction: column-reverse;
     text-align: center;
   }
 
@@ -597,13 +641,13 @@ section {
     width: 70vw;
     height: auto;
   }
+  .about-content p {
+    padding: 0% 5%;
+  }
 }
 
 @media (max-width: 768px) {
   .navbar {
- 
     width: 49%;
-   
   }
- 
 }
