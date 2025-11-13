@@ -7,7 +7,7 @@
   /* font-family: "Poppins"; */
 }
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #000000;
 
   --text-color: rgb(243, 243, 243);
   --second-bg-color: #ffffff;
@@ -490,6 +490,24 @@ section {
   padding: 2rem 0rem;
 }
 
+.Mid {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Mid p{
+  padding: 1rem 0;
+}
+
+.Mid ul {
+  list-style: none;   /* removes bullet dots */
+  padding: 0;         /* fixes weird spacing */
+}
+
+.Mid ul li {
+  margin: 6px 0;      /* optional clean spacing */
+}
+
 .menu-icon {
   font-size: 2.5rem;
   color: white;
@@ -519,7 +537,7 @@ section {
   margin-left: 20px;
 }
 .footer ul li a {
-  color: rgb(0, 0, 0);
+  color: var(--text-color);
   border-bottom: 3px solid transparent;
   transition: 0.3s ease-in-out;
 }
@@ -527,7 +545,7 @@ section {
   border-bottom: 3px solid var(--main-color);
 }
 .footer .copyright {
-  color: rgb(0, 0, 0);
+  color: var(--text-color);
   text-align: center;
   margin-top: 20px;
   font-size: 16px;
