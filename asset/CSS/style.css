@@ -357,11 +357,23 @@ section {
   padding: 1rem 5rem;
 }
 
-.project-title {
-  font-size: 5rem;
+.project-title  {
   color: var(--main-color);
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
   padding: 2rem 5rem;
+}
+
+.project-title h3 {
+  font-size: 5rem;
+  /* color: var(--main-color); */
+  /* margin-bottom: 3rem;
+  padding: 0rem 1rem; */
+}
+.project-title h2 {
+  font-size: 2rem;
+  
+  /* margin-bottom: 3rem;
+  padding: 2rem 1rem; */
 }
 
 .left-side-img {
@@ -667,5 +679,11 @@ section {
 @media (max-width: 768px) {
   .navbar {
     width: 49%;
+  }
+  .project-title{
+
+     font-size: 3rem;
+     padding: 2rem 2rem;
+
   }
 }
