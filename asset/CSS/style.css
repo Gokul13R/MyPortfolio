@@ -218,7 +218,7 @@ section {
   text-align: center;
   color: var(--second-text-color);
   margin: 0 auto; /* center the block itself */
-  padding: 0% 23%;
+  padding: 1% 23%;
 }
 .about-content .btn {
   margin: 3rem 0;
